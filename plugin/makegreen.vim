@@ -37,7 +37,7 @@ endfunction
 
 function s:RunMakeGreen(make_args)
   silent! w " TODO: configuration option?
-  silent! exec "make " . a:make_args
+  silent! exec "make! " . a:make_args
 
   redraw!
 
