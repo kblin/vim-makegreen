@@ -28,8 +28,16 @@ function MakeGreen(...) "{{{1
     let make_args = '%'
   endif
 
+  call s:RunMakeGreen(make_args)
+endfunction
+
+function MakeGreenAllTests()
+  call s:RunMakeGreen('')
+endfunction
+
+function s:RunMakeGreen(make_args)
   silent! w " TODO: configuration option?
-  silent! exec "make " . make_args
+  silent! exec "make " . a:make_args
 
   redraw!
 
